@@ -1,0 +1,161 @@
+:root {
+  --bg: #E2DEDA;
+  --sub: #D9D9D9;
+  --highlight: #635D5D;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background: var(--bg);
+}
+
+.wrap {
+  width: 960px;
+  margin: 0 auto;
+  margin-top: 160px;
+}
+
+.title {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+.board table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.board table tr {
+  line-height: 48px;
+}
+
+.board table thead tr {
+  border-bottom: 2px solid var(--highlight);
+}
+
+.board table thead tr,
+.board table tbody tr:nth-child(2n) {
+  background: var(--sub);
+}
+
+.board table th,
+.board table td {
+  text-align: center;
+}
+
+.board__text--title a,
+.board__text--author a {
+  cursor: pointer;
+}
+
+.board__text--title a:hover,
+.board__text--author a:hover {
+  text-decoration: underline;
+}
+
+.button-wrap {
+   width: 100%;
+
+   overflow: hidden;
+   margin: 32px auto;
+}
+
+.button {
+  float: right;
+  margin-right: 16px;
+}
+
+.button {
+  width: 96px;
+  height: 40px;
+  border: 0;
+  border-radius: 6px;
+
+  color: white;
+  background: var(--highlight);
+
+  font-size: 1.1rem;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.paging {
+  width: 100%;
+  margin: 20px auto;
+}
+
+.paging ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 300px;
+  margin: 0 auto;
+}
+
+.paging__button {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+
+  line-height: 32px;
+  text-align: center;
+}
+
+.paging__button--angle-bracket {
+  letter-spacing: -5px;
+}
+
+.paging__button:hover {
+  text-decoration: underline;
+}
+
+.paging__button--selected {
+  background: var(--highlight);
+  border-radius: 50%;
+}
+
+.paging__button--selected a {
+  color: white;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 960px) {
+  .wrap {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .wrap {
+    margin-top: 0;
+  }
+  
+  .board__text--index,
+  .board__text--author,
+  .board__text--date {
+    display: none;
+  }
+}
